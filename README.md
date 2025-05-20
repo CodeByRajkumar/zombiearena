@@ -36,3 +36,4 @@ A simple 2D top-down zombie survival game built with **C++** and **SFML**. Survi
 git clone https://github.com/CodeByRajkumar/zombiearena.git
 cd zombiearena
 g++ zombiearena.cpp -o zombiearena -lsfml-system -lsfml-window -lsfml-graphics -lsfml-audio
+./zombiearena
