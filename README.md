@@ -1,74 +1,38 @@
 # 🧟 Zombie Arena Game
 
-A simple top-down **Zombie Survival Arena** game built using **C++** and **SFML (Simple and Fast Multimedia Library)**. The objective is to survive waves of zombies for as long as possible.
+A simple 2D top-down zombie survival game built with **C++** and **SFML**. Survive waves of zombies in an arena using bullets, pickups, and strategic movement.
 
 ---
 
-## 🚀 Features
+## Features
 
-- Smooth 2D top-down shooter mechanics
-- Real-time zombie horde spawning
-- Bullet firing and collision detection
-- Health and ammo pickups
-- Multiple zombie types (Bloater, Chaser, Crawler)
-- Randomized zombie spawn positions within the arena
-- Sound effects and visual effects (blood, hit, reload, etc.)
+- Multiple zombie types and hordes  
+- Player shooting and health management  
+- Dynamic background and arena  
+- Sound effects and animations
 
 ---
 
-## 🧩 Code Structure
+## Files
 
-| File              | Description |
-|-------------------|-------------|
-| `zombiearena.cpp` | Main game loop, handles SFML window, input, game state, updates, and rendering. |
-| `player.cpp`      | Defines the `Player` class and its movement, health, and update logic. |
-| `zombie.cpp`      | Defines the `Zombie` class with movement AI and types. |
-| `bullet.cpp`      | Defines bullet behavior, including movement and collisions. |
-| `zombiearena.cpp` | Contains utility functions for creating the background and spawning the zombie horde. |
+- `zombiearena.cpp` — Main game logic and utility functions  
+- `player.cpp` — Player class and controls  
+- `zombie.cpp` — Zombie AI and behavior  
+- `bullet.cpp` — Bullet movement and collision
 
 ---
 
-## 🔧 Important Functions
+## Requirements
 
-### `int createBackground(VertexArray& rVA, IntRect arena);`
-
-- **Purpose:** Dynamically creates the background tile map based on the arena size.
-- **Parameters:**  
-  - `VertexArray& rVA`: Reference to the SFML vertex array for background tiles  
-  - `IntRect arena`: Rectangle defining the bounds of the arena  
-- **Returns:** Tile size used for the grid.
+- SFML 2.5 or newer  
+- C++17 or higher  
+- SFML libraries linked during compilation
 
 ---
 
-### `Zombie* createHorde(int numZombies, IntRect arena);`
+## How to Run
 
-- **Purpose:** Spawns a dynamically allocated array of `Zombie` objects within the arena.
-- **Parameters:**  
-  - `int numZombies`: Number of zombies to spawn  
-  - `IntRect arena`: Defines the spawning boundaries  
-- **Returns:** Pointer to the first zombie in the dynamically allocated array.
-
----
-
-## 🛠️ Requirements
-
-- **SFML** (version 2.5 or later recommended)  
-  Download: [https://www.sfml-dev.org/download.php](https://www.sfml-dev.org/download.php)
-
-- **C++17** or later
-- A C++ IDE like VSCode or Visual Studio
-- Proper linking of SFML libraries (graphics, window, audio, system)
-
----
-
-## 🖼️ Assets
-
-The `graphics/`, `sound/`, and `fonts/` directories contain all required textures, sounds, and fonts for the game to run smoothly.
-
----
-
-## 🧪 How to Run
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/CodeByRajkumar/zombiearena.git
+```bash
+git clone https://github.com/CodeByRajkumar/zombiearena.git
+cd zombiearena
+g++ zombiearena.cpp -o zombiearena -lsfml-system -lsfml-window -lsfml-graphics -lsfml-audio
